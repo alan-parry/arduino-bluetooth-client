@@ -31,8 +31,9 @@ public class ConnectThread extends Thread {
         } catch (IOException e) {}
         mmSocket = tmp;
     }
+
     public void run() {
-        byte[] buffer = new byte[1024];
+        /* byte[] buffer = new byte[1024];
         int begin = 0;
         int bytes = 0;
         while (true) {
@@ -51,8 +52,9 @@ public class ConnectThread extends Thread {
             } catch (IOException e) {
                 break;
             }
-        }
+        } */
     }
+
     public void cancel() {
         try {
             mmSocket.close();
